@@ -34,4 +34,5 @@ function getHistory()
     const historyContainer = document.getElementById('history-container');
     const test = "testing 123";
     historyContainer.innerText = test;
+    //WIP
 }
