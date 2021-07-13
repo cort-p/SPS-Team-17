@@ -12,10 +12,10 @@ request({url:playlists_url, headers:{"Authorization":token}}, function(err, res)
             var playlist = JSON.parse(res.body);
               console.log("playlist: " + playlist.name);
                 playlist.tracks.items.forEach(function(track){
-                  console.log(track.track.name);
-									    																																				});
-						    																																							}
-				  																																					})		
-		  																																										}
+                  console.log(track.track.name); 
+									    	  });
+				  }
+				})		
+		  }
 });
 
