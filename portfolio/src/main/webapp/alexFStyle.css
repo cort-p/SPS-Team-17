@@ -44,6 +44,7 @@ html, body {
 .main-nav li {
     padding: 0 5%;
 }
+
 .header {
     text-align: center;
     margin: 0;
@@ -62,4 +63,25 @@ html, body {
 
 .test {
     font-size: 2em;
+}
+
+.quiz {
+    margin-left: 25%;
+    font-size: 2em;
+}
+
+.button {
+    background-color: rgb(90, 201, 90);
+    text-align: center;
+    padding: 20px;
+    border: 6px solid black;
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    font-family: "Tahoma", "Arial", sans-serif;
+    font-size: 1.5em;
+}
+
+.margin {
+    margin: 0;
+    text-align: center;
 }
