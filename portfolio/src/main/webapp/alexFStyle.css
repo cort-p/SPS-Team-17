@@ -20,6 +20,16 @@ html, body {
     text-align: center;
 }
 
+.desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-break: break-word;
+    height: 100px;
+    width: 1000px;
+    margin: 0 auto;
+}
+
 .nav ul {
     margin: 0;
 }
@@ -84,4 +94,9 @@ html, body {
 .margin {
     margin: 0;
     text-align: center;
+}
+
+.logo {
+    width: 10%;
+    height: 10%;
 }
