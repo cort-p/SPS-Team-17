@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="alexFStyle.css">
+    <script src="script.js"></script>
+  </head>
+  <body onload="">
+    <div class="main-header">
+        <nav class="nav main-nav">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="quiz.html">QUIZ</a></li>
+                <li><a href="history.html">HISTORY</a></li>
+            </ul>
+        </nav>
+      <h1 class="header">Music Recommender Quiz</h1>
+    </div>
+    <div class="quiz">
+      <form action="results.html" method="post">
+          <br>
+          The emotion that most describes me at this moment is: <br>
+          <input type="radio" name="emotion" value="happy">Happy<br>
+          <input type="radio" name="emotion" value="sad">Sad<br>
+          <input type="radio" name="emotion" value="angry">Angry<br>
+          <input type="radio" name="emotion" value="relaxed">Relaxed<br>
+          <br>
+          The genre that most describes my music taste is: <br>
+          <input type="radio" name="taste" value="rock">Rock<br>
+          <input type="radio" name="taste" value="rap">Rap<br>
+          <input type="radio" name="taste" value="pop">Pop<br>
+          <input type="radio" name="taste" value="country">Country<br>
+          <input type="radio" name="taste" value="indie">Indie<br>
+          <br>
+          I like a lot of music from: <br>
+          <input type="radio" name="time" value="before 1990">Before 1990<br>
+          <input type="radio" name="time" value="1990s">1990s<br>
+          <input type="radio" name="time" value="2000s">2000s<br>
+          <input type="radio" name="time" value="after 2010">After 2010<br>
+          <br>
+          The song I want should have the following percentage of acousticness: <br>
+          0% <input type="range" name="acousticness" min="0" max="100"> 100%
+          <br>
+    </div><br>
+          <div class="margin"><input type="submit" class="button" name="submit" value="See Results"></div>          
+      </form>
+    
+  </body>
+</html>
