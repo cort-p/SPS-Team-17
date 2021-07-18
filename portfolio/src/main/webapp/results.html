@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="alexFStyle.css">
     <script src="script.js"></script>
   </head>
-  <body onload="getResult()">
+  <body onload="getResult(); onPageLoad()">
     <script src="https://sdk.scdn.co/spotify-player.js"></script>
     <script>
         window.onSpotifyWebPlaybackSDKReady = () => {
@@ -24,9 +24,11 @@
       <h1 class="header">Results</h1>
     </div>
     <div class="content">
+      <img img id="albumImage" src="">
       <p id="result-container" class="result"></p> 
       <iframe id="spotifyPlayer" src="" width="" height="380" frameBorder="" allowtransparency="true" allow="encrypted-media"></iframe>
       <br>
+      <a id="recLink">Open song in Spotify</a>
       <button class="button" onclick=unlikeSong()>I don't like this song.</button><br><br>
       <div id="unlike-container"></div>
     </div>
