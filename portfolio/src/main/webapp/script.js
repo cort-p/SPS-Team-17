@@ -15,6 +15,12 @@ var seedTracks = "5ruzrDWcT0vuJIOMW7gMnW";
 //gets result based on quiz results
 //this needs to be hooked up to the algorithm and spotify api to return a result
 function getResult() {
+    const songs = ['https://open.spotify.com/embed/track/06KakoES48DwEoAiUIdjmg', 'https://open.spotify.com/embed/track/1OXGJ7jRok4c3KBnIYkuwH', 
+    'https://open.spotify.com/embed/track/35xnCYrjXbuqhgl7E0rhck', 'https://open.spotify.com/embed/track/6KXuDNOwiNR0q7KLGXs3Bo'];
+
+    const randomSong = songs[Math.floor(Math.random() * songs.length)];
+
+    document.getElementById('spotifyPlayer').src = randomSong;
     console.log("recommending");
     //callApi( "GET", _baseUri + "/recommendations?limit=1&market=US&seed_artists=7Ln80lUS6He07XvHI8qqHH&seed_genres=alternative&seed_tracks=5ruzrDWcT0vuJIOMW7gMnW", null, handleGetResultResponse);
     callApi( "GET", _baseUri + "/recommendations?limit="+songNum+"&market=US&seed_artists="+seedArtists+"&seed_genres="+seedGenres+"&seed_tracks="+seedTracks, null, handleGetResultResponse);
@@ -66,6 +72,15 @@ function getHistory() {
     historyContainer.innerHTML = history;
     //WIP
 }
+/*i promise - radiohead
+    https://open.spotify.com/embed/track/06KakoES48DwEoAiUIdjmg
+happy ending- the strokes
+    https://open.spotify.com/embed/track/1OXGJ7jRok4c3KBnIYkuwH
+stay home - american football
+    https://open.spotify.com/embed/track/35xnCYrjXbuqhgl7E0rhck
+red light - the strokes
+    https://open.spotify.com/embed/track/6KXuDNOwiNR0q7KLGXs3Bo
+*/
 
 //Handles getting authorization from spotify and fetching the access token
 function onPageLoad(){
