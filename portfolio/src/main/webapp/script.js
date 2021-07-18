@@ -1,6 +1,6 @@
 const AUTHORIZE = "http://accounts.spotify.com/authorize";
 const TOKEN = "https://accounts.spotify.com/api/token";
-var redirect_uri = "https://8080-cs-509384085718-default.cs-us-central1-pits.cloudshell.dev/results.html"; 
+var redirect_uri = window.location.origin + "/results.html"; 
 var client_id = "7a6472d8bfaa4c4089ab328420d192aa"; //I just hardcoded my own id and secret for now
 var client_secret = "1e8c8f313bb04301a8855291a9c77d81";
 var _baseUri = "https://api.spotify.com/v1";
