@@ -14,13 +14,13 @@
                 <li><a href="history.html">HISTORY</a></li>
             </ul>
         </nav>
-      <h1 class="header">Music Recommender Quiz</h1>
+        <h1 class="header">Music Recommender Quiz</h1>
     </div>
     <div class="quiz">
-      <form action="results.html">
-          <br>
-          <b>I want a song that falls under the following genre: </b>
-          <select class="selectmenu" name="genre" form="quiz" required>
+        <form action="results.html">
+            <br>
+            <b>I want a song that falls under the following genre: </b>
+            <select class="selectmenu" name="genre" required>
                 <option hidden disabled selected value="">Select a genre</option>
                 <option value="acoustic">Acoustic</option>
                 <option value="afrobeat">Afrobeat</option>
@@ -143,20 +143,21 @@
                 <option value="turkish">Turkish</option>
                 <option value="work-out">Work-out</option>
                 <option value="world-music">World-music</option>
-          </select>
-          <br><br>
-          <b>I want a song that is: </b>
-          <br><br>
-          Sad <input type="range" name="valence" min="0" max="100"> Happy
-          <br><br>
-          Not well-known <input type="range" name="popularity" min="0" max="100"> Popular
-          <br><br>
-          Slow <input type="range" name="bpm" min="40" max="200"> Fast
-          <br><br>
-          0% Acoustic <input type="range" name="acousticness" min="0" max="100"> 100% Acoustic
-          <br><br>
-    </div>
-            <div class="center"><button type="submit" class="button">See Results</button></div>          
+            </select>
+            <br><br>
+            <b>I want a song that is: </b>
+            <br><br>
+            Sad <input type="range" name="valence" min="0" max="100"> Happy
+            <br><br>
+            Not well-known <input type="range" name="popularity" min="0" max="100"> Popular
+            <br><br>
+            Slow <input type="range" name="bpm" min="40" max="200"> Fast
+            <br><br>
+            0% Acoustic <input type="range" name="acousticness" min="0" max="100"> 100% Acoustic
+            <br><br>
+
+            <div class="center"><button type="submit" class="button">See Results</button></div>
         </form>
+    </div>
   </body>
 </html>
