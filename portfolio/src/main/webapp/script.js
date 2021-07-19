@@ -12,6 +12,22 @@ var songNum = 1;
 var seedArtists = "7Ln80lUS6He07XvHI8qqHH"; 
 var seedGenres = "alternative";
 var seedTracks = "5ruzrDWcT0vuJIOMW7gMnW";
+
+
+//sets music preference variables based on test results
+function testResults(form) {
+    var valence = form.valence.value;
+    var genre = form.genre.value;
+    var popularity = form.popularity.value;
+    var bpm = form.bpm.value;
+    var acousticness = form.acousticness.value;
+        
+    console.log("You want a song that has a valence of " + valence + "%");
+    console.log("The genre you picked was: " + genre);
+    console.log("You want a song that is " + popularity + "% popular.");
+    console.log("You like songs with " + acousticness + "% of acousticness.");
+    console.log("You want a song that is " + bpm + " BPM.");
+}
 //gets result based on quiz results
 //this needs to be hooked up to the algorithm and spotify api to return a result
 function getResult() {
@@ -23,7 +39,7 @@ function getResult() {
     document.getElementById('spotifyPlayer').src = randomSong;
     console.log("recommending");
     //callApi( "GET", _baseUri + "/recommendations?limit=1&market=US&seed_artists=7Ln80lUS6He07XvHI8qqHH&seed_genres=alternative&seed_tracks=5ruzrDWcT0vuJIOMW7gMnW", null, handleGetResultResponse);
-    callApi( "GET", _baseUri + "/recommendations?limit="+songNum+"&market=US&seed_artists="+seedArtists+"&seed_genres="+seedGenres+"&seed_tracks="+seedTracks, null, handleGetResultResponse);
+    callApi( "GET", _baseUri + "/recommendations?limit="+songNum+"&market=US&seed_genres="+genre+"&target_acousticness="+acousticness+"&target_popularity="+popularity+"&target_tempo="+bpm+"&target_valence="+valence, null, handleGetResultResponse);
 }
 function handleGetResultResponse(){
      if ( this.status == 200 ){
