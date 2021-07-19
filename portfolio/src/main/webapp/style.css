@@ -100,3 +100,31 @@ html, body {
     margin: 0;
     text-align: center;
 }
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selectmenu {
+    background-color: rgb(90, 201, 90);
+    text-align: center;
+    padding: 5px;
+    border: 4px solid black;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-family: "Tahoma", "Arial", sans-serif;
+    font-size: 1em;
+}
+
+option {
+    background-color: rgb(90, 201, 90);
+    text-align: center;
+    padding: 5px;
+    border: 4px solid black;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-family: "Tahoma", "Arial", sans-serif;
+    font-size: 1em;
+}
