@@ -3,14 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <title>Quiz</title>
-    <link rel="stylesheet" href="alexFStyle.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts/quiz.js"></script>
   </head>
-  <body>
+  <body onload="handleAuthRedirect()">
     <div class="main-header">
         <nav class="nav main-nav">
             <ul>
-                <li><a href="index.html">HOME</a></li>
                 <li><a href="quiz.html">QUIZ</a></li>
                 <li><a href="history.html">HISTORY</a></li>
             </ul>
@@ -18,8 +17,7 @@
       <h1 class="header">Music Recommender Quiz</h1>
     </div>
     <div class="quiz">
-      <form action="results.html" id="quiz" onsubmit="" method="GET">
-          <br>
+      <form action="results.html">
           I want a song that sounds: <br>
           Sad <input type="range" name="valence" min="0" max="100"> Happy
           <br>
@@ -147,7 +145,7 @@
                 <option value="work-out">Work-out</option>
                 <option value="world-music">World-music</option>
           </select>
-          
+
           <br><br>
           I want to be recommended a song that is: <br>
           Not well-known <input type="range" name="popularity" min="0" max="100"> Popular
@@ -158,9 +156,8 @@
           The song I want should have the following percentage of acousticness: <br>
           0% <input type="range" name="acousticness" min="0" max="100"> 100%
           <br>
-    </div><br>
-          <div class="margin"><input type="submit" class="button" name="submit" value="See Results" onclick="testResults(this.form)"></div>          
+          <div class="margin"><button type="submit" class="button">See Results</button></div>          
       </form>
-    
+    </div>
   </body>
 </html>
