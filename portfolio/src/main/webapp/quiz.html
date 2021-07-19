@@ -18,11 +18,9 @@
     </div>
     <div class="quiz">
       <form action="results.html">
-          I want a song that sounds: <br>
-          Sad <input type="range" name="valence" min="0" max="100"> Happy
           <br>
-          I want a song that falls under the following genre: <br>
-          <select name="genre" form="quiz" required="required">
+          <b>I want a song that falls under the following genre: </b>
+          <select class="selectmenu" name="genre" form="quiz" required="required">
                 <option value="acoustic">Acoustic</option>
                 <option value="afrobeat">Afrobeat</option>
                 <option value="alt-rock">Alt-rock</option>
@@ -145,19 +143,19 @@
                 <option value="work-out">Work-out</option>
                 <option value="world-music">World-music</option>
           </select>
-
           <br><br>
-          I want to be recommended a song that is: <br>
+          <b>I want a song that is: </b>
+          <br><br>
+          Sad <input type="range" name="valence" min="0" max="100"> Happy
+          <br><br>
           Not well-known <input type="range" name="popularity" min="0" max="100"> Popular
           <br><br>
-          I want to be recommended a song that is: <br>
           Slow <input type="range" name="bpm" min="40" max="200"> Fast
           <br><br>
-          The song I want should have the following percentage of acousticness: <br>
-          0% <input type="range" name="acousticness" min="0" max="100"> 100%
-          <br>
-          <div class="margin"><button type="submit" class="button">See Results</button></div>          
-      </form>
+          0% Acoustic <input type="range" name="acousticness" min="0" max="100"> 100% Acoustic
+          <br><br>
     </div>
+            <div class="center"><button type="submit" class="button">See Results</button></div>          
+        </form>
   </body>
 </html>
