@@ -1,20 +1,37 @@
 const baseUri = 'https://api.spotify.com/v1';
 const accessTokenKey = 'access_token';
 
-// Hardcoded results.
 var songNum = 1;
-var seedArtists = '7Ln80lUS6He07XvHI8qqHH'; 
-var seedGenres = 'alternative';
-var seedTracks = '5ruzrDWcT0vuJIOMW7gMnW';
 
 // Gets result based on quiz results.
 function getResult() {
-    // Need to change options here to match new quiz and get values from URL query params.
+    // Get values from URL query params.
+    let seedGenres = null;
+    let targetValence = null;
+    let targetPopularity = null;
+    let targetTempo = null;
+    let targetAcousticness = null;
+    const queryString = window.location.search;
+    if(queryString.length > 0)
+    {
+        const urlParams = new URLSearchParams(queryString);
+        seedGenres = urlParams.get('genre');
+        targetValence = urlParams.get('valence');
+        targetPopularity = urlParams.get('popularity');
+        targetTempo = urlParams.get('bpm');
+        targetAcousticness = urlParams.get('acousticness');
+        targetValence = targetValence/100;
+        targetPopularity = targetPopularity;
+        targetAcousticness = targetAcousticness/100;
+    }
+
     let url = baseUri + '/recommendations';
     url += '?limit=' + songNum;
-    url += '&market=US&seed_artists=' + seedArtists;
     url += '&seed_genres=' + seedGenres;
-    url += '&seed_tracks=' + seedTracks;
+    url += '&target_valence=' + targetValence;
+    url += '&target_popularity=' + targetPopularity;
+    url += '&target_tempo=' + targetTempo;
+    url += '&target_acousticness=' + targetAcousticness;
     callApi('GET', url, null, handleGetResultResponse);
 }
 
